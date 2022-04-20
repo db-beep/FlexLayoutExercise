@@ -6,6 +6,15 @@ struct Index {
     Column() {
       Search_Input({historyArr: $historyArr})
       Flexlayout_Container({historyArr:$historyArr})
+      Button('清空')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .fontColor(Color.Red)
+        .width(200)
+        .height(80)
+        .onClick(() =>{
+          this.historyArr = []
+        })
     }
     .alignItems(HorizontalAlign.Center)
   }
